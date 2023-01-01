@@ -8,12 +8,31 @@ function Calculadora() {
     const[num,setNum]=useState(2);
 
     function inputNum(e){
-        setNum(num + e.target.value);
-
+        if(num===0){
+            setNum(e.target.value)
+        }else{
+            setNum(num + e.target.value)
+        }
     }
 
     function tiraNum(e) {
-        setNum(0)
+        setNum(0)        
+    }
+
+    function porcentagem (e){
+        setNum(num/100)
+    }
+
+    function reverse (){
+        if(num>0){
+            setNum(-num)
+        }else{
+            setNum(-num)
+        }
+    }
+
+    function divisao (){
+        setNum(num )
     }
 
 
@@ -25,9 +44,9 @@ function Calculadora() {
             <h1>{num}</h1>
 
             <button className='branco' onClick={tiraNum} >AC</button>
-            <button className='branco'>+-</button>
-            <button className='branco'>%</button>
-            <button className='laranja'>/</button>
+            <button className='branco' onClick={reverse}>+/-</button>
+            <button className='branco' onClick={porcentagem}>%</button>
+            <button className='laranja' onClick={divisao}>/</button>
             <button className='cinzas' onClick={inputNum} value={7}>7</button>
             <button  className='cinzas' onClick={inputNum} value={8}>8</button>
             <button className='cinzas' onClick={inputNum} value={9}>9</button>
@@ -41,7 +60,7 @@ function Calculadora() {
             <button className='cinzas' onClick={inputNum} value={3}>3</button>
             <button  className='laranjas'>+</button>
             <button className='cinzas' onClick={inputNum} value={0}>0</button>
-            <button className='cinzas'>,</button>
+            <button className='cinzas' onClick={inputNum} value={","}>,</button>
             <button className='cinzas' id='invisivel'>+-</button>
             <button className='branco'>=</button>
         </div>
