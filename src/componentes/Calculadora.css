@@ -1,0 +1,56 @@
+
+:root {
+    --laranja: #ff9500;
+    --white: #505050;
+    --preto: #1c1c1c;
+    --branco:#d4d4d2;
+  }
+
+  h1{
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    font-size: 3rem;
+  }
+
+.wrapper{
+    border-radius: 2rem;
+    background-color: #000000;
+    padding: 2rem;
+}
+
+.wrapper button{
+    cursor:pointer;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 30px;
+    border: none;
+    font-size: 2rem;
+    width: 4rem;
+    height: 4rem;
+    transition: 0.2s;
+}
+
+.wrapper button:hover{
+    filter:opacity(0.8)
+}
+
+#invisivel{
+
+    visibility: hidden;
+}
+
+
+
+.cinzas{
+    background-color: #505050;
+}
+
+.laranjas{
+    background-color: #ff9500;
+}
+
+.brancos{
+    background-color: #d4d4d2;
+}
