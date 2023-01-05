@@ -46,13 +46,10 @@ function Calculadora() {
         }
 
 
-
-
-
         console.log('calculou');
-        console.log(oldNum);
-        console.log(num);
-        console.log(operador);
+        console.log(Math.round(oldNum));
+        console.log(Math.round(num));
+        console.log(Math.round(operador));
         
     }
 
